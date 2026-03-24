@@ -1,0 +1,17 @@
+.aboutMeSection {
+    background-color: rgba(0, 0, 0, 0.908);
+    color: white;
+    padding: 2rem 10rem;
+
+}
+
+.aboutMeSection h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.aboutMeSection p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.7;
+}

@@ -1,0 +1,49 @@
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.908);
+    align-items: center;
+    padding: 1rem 6rem;
+    height: 90vh;
+}
+
+.hero-image {
+    height: 400px;
+    width: 400px;
+    background-image: url("C:\Users\Vicky\Desktop\Portfolio\frontend\public\portfolio_image.PNG");
+    background-size: contain;
+
+}
+
+.hero-image:hover {
+    cursor: pointer;
+
+    /* Border only on right and bottom */
+    border-right: 2px solid rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+
+    /* Shadow only on bottom-right */
+    box-shadow: 2px 4px 6px white;
+
+    opacity: 0.8;
+    background-color: rgb(39, 37, 37);
+    border-radius: 20px;
+}
+
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+
+.hero-description {
+
+    opacity: 0.7;
+}
+
+.hero-text {
+    padding: 4rem;
+    color: White;
+}

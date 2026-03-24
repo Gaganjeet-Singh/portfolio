@@ -1,0 +1,47 @@
+.navbar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.7rem;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.908);
+    color: white;
+}
+
+.main-name {
+    margin-left: 4rem;
+}
+
+.main-icons {
+    margin-right: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 1.25rem;
+
+}
+
+.main-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.main-icons p:hover {
+    cursor: pointer;
+}
+
+.main-links p {
+    cursor: pointer;
+}
+
+.main-name a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-links a {
+    text-decoration: none;
+    color: white;
+}
+
