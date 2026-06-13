@@ -92,9 +92,9 @@ export const portfolioData = {
       },
     ],
     stats: [
-      { value: '4', label: 'Projects highlighted' },
+      { value: '3', label: 'Projects highlighted' },
       { value: '5', label: 'Skill categories' },
-      { value: '4', label: 'Certifications listed' },
+      { value: '3', label: 'Certifications listed' },
       { value: '3', label: 'Social profiles linked' },
     ],
   },
