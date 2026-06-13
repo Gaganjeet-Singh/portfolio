@@ -1,0 +1,127 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.project-visual {
+  padding: 1.4rem;
+  border-bottom: 1px solid var(--color-divider);
+  background:
+    linear-gradient(135deg, var(--color-project-visual-primary), var(--color-project-visual-secondary)),
+    var(--color-surface-wash);
+}
+
+.project-visual span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.3rem;
+  height: 3.3rem;
+  padding-inline: 0.8rem;
+  border-radius: 1rem;
+  background: var(--color-input-focus);
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.project-visual p {
+  margin: 0.9rem 0 0;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.project-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.project-topline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.project-topline h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-status {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-secondary-soft);
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(99, 86, 70, 0.12);
+  border-radius: 999px;
+  background: var(--color-surface-elevated);
+  color: var(--color-text);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: auto;
+  padding-top: 0.2rem;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-accent);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.project-links a:hover {
+  color: var(--color-accent-strong);
+}
+
+.project-pending,
+.project-open {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.project-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}

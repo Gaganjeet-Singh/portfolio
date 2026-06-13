@@ -1,47 +1,73 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
+import { portfolioData } from '../data/portfolioData';
 import './footer.css';
 
+const socialIconMap = {
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  leetcode: SiLeetcode,
+};
+
 function Footer() {
-    return (
-        <footer className='footer-section'>
+  const currentYear = new Date().getFullYear();
 
-            <div className='footer-container'>
+  return (
+    <footer className="footer-section">
+      <div className="section-inner footer-grid">
+        <div className="footer-brand">
+          <span className="footer-mark">{portfolioData.profile.initials}</span>
+          <div>
+            <h2>{portfolioData.profile.fullName}</h2>
+            <p>{portfolioData.profile.title}</p>
+          </div>
+        </div>
 
-                <div className='footer-left'>
-                    <h2 className="footer-logo">GAGAN</h2>
-                    <p className="footer-tagline">
-                        AI/ML Engineer & Data Scientist building intelligent systems.
-                    </p>
-                </div>
+        <div className="footer-column">
+          <h3>Quick Links</h3>
+          <ul className="footer-link-list">
+            {portfolioData.navigationItems.map((item) => (
+              <li key={item.id}>
+                <a href={`#${item.id}`}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-                <div className='footer-links'>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
+        <div className="footer-column">
+          <h3>Contact</h3>
+          <p>{portfolioData.contact.email}</p>
+          <p>{portfolioData.contact.phone}</p>
+          <p>{portfolioData.contact.location}</p>
 
-                <div className='footer-social'>
-                    <h3>Connect</h3>
-                    <div className="social-icons">
-                        <a href="#"><FaLinkedin /></a>
-                        <a href="#"><FaGithub /></a>
-                        <a href="#"><SiLeetcode /></a>
-                    </div>
-                </div>
+          <div className="footer-socials">
+            {portfolioData.socialLinks.map((link) => {
+              const Icon = socialIconMap[link.icon];
 
-            </div>
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={link.label}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      </div>
 
-            <div className="footer-bottom">
-                <p>© 2026 Gagan. All Rights Reserved.</p>
-            </div>
-
-        </footer>
-    );
+      <div className="footer-bottom">
+        <p>
+          Copyright {currentYear} {portfolioData.profile.fullName}. Built with React, Framer Motion,
+          and EmailJS.
+        </p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

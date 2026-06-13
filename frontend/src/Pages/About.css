@@ -1,17 +1,88 @@
-.aboutMeSection {
-    background-color: rgba(0, 0, 0, 0.908);
-    color: white;
-    padding: 2rem 10rem;
-
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: 1.5rem;
+  align-items: start;
 }
 
-.aboutMeSection h2 {
-    font-size: 2rem;
-    font-weight: bold;
+.about-story {
+  padding: 1.7rem;
 }
 
-.aboutMeSection p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    opacity: 0.7;
+.about-copy-block + .about-copy-block {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-divider);
+}
+
+.about-copy-block h3,
+.highlight-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+}
+
+.about-copy-block p,
+.highlight-card p,
+.stat-item span {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 1rem;
+}
+
+.highlight-card {
+  padding: 1.35rem;
+}
+
+.highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  margin-bottom: 1rem;
+  border-radius: 0.95rem;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  padding: 1.25rem;
+}
+
+.stat-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .about-story,
+  .highlight-card,
+  .stat-item {
+    padding: 1.2rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
